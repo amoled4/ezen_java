@@ -1,0 +1,60 @@
+package day12;
+
+import java.util.Scanner;
+
+public class Exception02 {
+
+	public static void main(String[] args) {
+		// num1, num2, 연산자 입력하여 메서드 실행
+		// 예외처리
+		
+		Scanner scan = new Scanner(System.in);
+		int num1;
+		int num2;
+		String op;
+		System.out.println("첫 번째 숫자를 입력해 주세요.");
+		num1 = scan.nextInt();
+		System.out.println("두 번째 숫자를 입력해 주세요.");
+		num2 = scan.nextInt();
+		System.out.println("연산자를 입력해 주세요.");
+		op = scan.next();
+		
+		switch(op) {
+		case "+":
+			calcadd(num1, num2, op);
+			break;
+		case "-":
+			calcmin(num1, num2, op);
+			break;
+		case "*":
+			calcmul(num1, num2, op);
+			break;
+		case "/":
+			calcna(num1, num2, op);
+			break;
+		}
+		
+
+	}
+	
+	// 기능 : 두 수를 입력받고, 연산자를 입력받아 사칙연산의 결과를 리턴하는 메서드 생성
+	public static int calcadd(int num1, int num2, String op) {
+		return num1 + num2; 
+	
+
+		
+	}
+	public static int calcmin(int num1, int num2, String op) {
+		return num1 - num2;
+	}
+	public static int calcmul(int num1, int num2, String op) {
+		return num1 * num2;
+	}
+	public static int calcna(int num1, int num2, String op) {
+		return num1 / num2;
+	}
+	
+	
+	
+
+}

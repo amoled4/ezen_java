@@ -1,0 +1,31 @@
+package day03;
+
+public class For문3 {
+
+	public static void main(String[] args) {
+		// 1부터 100까지 합계
+		int sum = 0;
+		for(int i =1; i<=100; i++) {
+			sum += i;   // 누적 => 내 변수 = 내 변수 + sum대상 
+			// 0+1+2+3+.....+99+100
+		}
+		System.out.println("sum = "+sum);
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

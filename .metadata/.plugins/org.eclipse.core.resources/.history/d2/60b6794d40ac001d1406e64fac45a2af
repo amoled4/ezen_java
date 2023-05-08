@@ -1,0 +1,31 @@
+package day11;
+
+public class VIPCustomer extends Customer {
+	
+	private int agentID;
+	
+	// 할인율 saleRatio
+		double saleRatio;
+		
+		public VIPCustomer() {	}
+		public VIPCustomer(int id, String name, int agentid) {
+			super(id, name);
+			customerGrade = "VIP";
+			bonusRatio = 0.05;
+			saleRatio = 0.1;
+			agentID = agentid;
+			
+		}
+		public int calcPrice(int price) {
+			bonusPoint += (int)(price * bonusRatio);
+			return price - (int)(price * saleRatio);
+		}
+		@Override
+		public void customerInfo() {
+			super.customerInfo();
+			System.out.println("(전담상담사 번호는 "+agentID+"번입니다.)");
+		}
+		
+		
+
+}

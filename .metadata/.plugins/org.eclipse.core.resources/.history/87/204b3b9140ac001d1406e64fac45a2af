@@ -1,0 +1,77 @@
+package day11;
+
+public class CustomerMain {
+
+	public static void main(String[] args) {
+		
+		Customer[] customerList = new Customer[10];
+		// 업캐스팅 -> 묵시적인 형변환이 가능
+		Customer c = new Customer(001, "홍길동");
+		Customer g1 = new GoldCustomer(002, "홍길순");
+		Customer v1 = new VIPCustomer(003, "김크림",1);
+		
+		// 다운캐스팅 -> 반드시 명시적으로 형변환 해야함
+		// instanceof : 원래 인스턴스의 형이 맞는지 여부를 체크하는 명령어 / 맞으면 true , false
+		if(v1 instanceof VIPCustomer) {
+			VIPCustomer vCustomer = (VIPCustomer)v1;
+		} else if(v1 instanceof GoldCustomer) {
+			GoldCustomer vCustomer = (GoldCustomer)v1;
+		} else {
+			System.out.println("error");
+		}
+//		System.out.println(VIPCustomer.getAgentID());
+		
+		
+		
+		
+		
+		int cnt = 0;
+		customerList[cnt] = c;
+		cnt++;
+		customerList[cnt] = g1;
+		cnt++;
+		customerList[cnt] = v1;
+		cnt++;
+		
+		System.out.println("----고객 정보 출력----");
+		// for문을 활용해서 고객정보 출력
+		for(int i=0; i<cnt; i++) {
+			customerList[i].customerInfo();
+		}
+		
+		System.out.println("----할인율과 포인트 계산----");
+		int price = 1000000;
+		
+		// for문을 활용하여 할인울과 포인트 계산 내역 출력
+		for(int i=0; i<cnt; i++) {
+			System.out.println(customerList[i].getCustomerName()+ " 님이 지불하실 금액은 "+customerList[i].calcPrice(price)+"원입니다.");
+			System.out.println(customerList[i].getCustomerName()+" 님의 현재 포인트는 "+customerList[i].bonusPoint+"점입니다.");
+		}
+		
+		
+//		c.calcPrice(1000);
+//		c.calcPrice(100);
+//		c.customerInfo();
+//		
+//		g1.customerInfo();
+//		
+//		v1.customerInfo();
+//		
+//		System.out.println("=== 할인율과 포인트 계산===");
+//		int price = 100000;
+//		int cost = c.calcPrice(price);
+//		
+//		System.out.println(c.getCustomerName()+" 님이 지불하실 금액은 "+cost+"원입니다.");
+//		System.out.println(c.getCustomerName()+" 님의 현재 포인트는 "+c.bonusPoint+"점입니다.");
+//		
+//		int cost1 = g1.calcPrice(price);
+//		System.out.println(g1.getCustomerName()+" 님이 지불하실 금액은 "+cost+"원입니다.");
+//		System.out.println(g1.getCustomerName()+" 님의 현재 포인트는 "+g1.bonusPoint+"점입니다.");
+//		
+//		int cost2 = v1.calcPrice(price);
+//		System.out.println(v1.getCustomerName()+" 님이 지불하실 금액은 "+cost+"원입니다.");
+//		System.out.println(v1.getCustomerName()+" 님의 현재 포인트는 "+v1.bonusPoint+"점입니다.");
+
+	}
+
+}

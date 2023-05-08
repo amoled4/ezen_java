@@ -1,0 +1,129 @@
+package day10;
+
+
+public class EzenComputer {
+	public void main(String[] args) {
+		 EzenComputer ec = new EzenComputer("홍길동", "920916", 30, "010-111-1111", className);
+		 ec.studentPrint();
+		 ec.centerPrint();
+		 ec.classPrint();
+	 }
+	/* - 학생 기본정보 : 이름, 생년월일. 나이, 전화번호
+	 * - 학원 정보 : 학원이름 = "EZEN", 지점
+	 * - 수강 정보 : 수강과목, 수강기간
+	 * - 한 명의 학생은 여러 과목을 수강할 수 있음
+	 * 과목, 기간 => 배열로 처리, 길이 = 5
+	 * ex)
+	 * 홍길동, 990101, 20, 010-1111-1111
+	 * EZEN, 인천
+	 * 자바(6개월), DB(1개월), html(2개월)
+	 * 
+	 * 기능 : 
+	 *  학생의 기본정보 출력
+	 *  학생의 학원정보 출력
+	 *  학생의 수강정보 출력
+	 *  학생의 수강정보를 추가하는 기능
+	 * 
+	 */
+	private String studentName;
+	private String birth;
+	private int age;
+	private String callNum;
+	private final String center = "EZEN";
+	private String centerName;
+	private String[] className;
+	
+	public EzenComputer() { }
+	
+	
+	public EzenComputer(String studentName, String birth, int age, String callNum, String[] className) {
+		super();
+		this.studentName = studentName;
+		this.birth = birth;
+		this.age = age;
+		this.callNum = callNum;
+		this.className = className;
+	}
+
+
+	public void studentPrint() {
+		System.out.print(studentName+", ");
+		System.out.print(birth+", ");
+		System.out.print(age+", ");
+		System.out.println(callNum);
+	}
+	
+	public void centerPrint() {
+		System.out.print(center+", ");
+		System.out.println(centerName);
+	}
+	
+	public void classPrint() {
+		String[] className = new String[5];
+		className[0] = "자바(6개월)";
+		className[1] = "DB(1개월)";
+		className[2] = "html(2개월)";
+		
+		
+	}
+	
+	
+	// getter/setter
+	public String getStudentName() {
+		return studentName;
+	}
+
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
+	}
+
+	public String getBirth() {
+		return birth;
+	}
+
+	public void setBirth(String birth) {
+		this.birth = birth;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getCallNum() {
+		return callNum;
+	}
+
+	public void setCallNum(String callNum) {
+		this.callNum = callNum;
+	}
+
+	public String getCenterName() {
+		return centerName;
+	}
+
+	public void setCenterName(String centerName) {
+		this.centerName = centerName;
+	}
+
+	public String[] getClassName() {
+		return className;
+	}
+
+	public void setClassName(String[] className) {
+		this.className = className;
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

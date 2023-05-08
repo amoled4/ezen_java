@@ -1,0 +1,72 @@
+package day04;
+
+import java.util.Scanner;
+
+public class 문제 {
+
+	public static void main(String[] args) {
+		/* 1~50사이의 랜덤수 하나를 생성 후 맞히는 게임.
+		 * 예) 컴퓨터가 랜덤수를 생성했습니다. : 45
+		 * 사용자 입력 : 20
+		 * up!
+		 * 사용자 입력 : 30
+		 * up!
+		 * 사용자 입력 : 49
+		 * down!
+		 * 사용자 입력 : 45
+		 * 정답입니다.
+		 */
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int num = (int)(Math.random()*50) +1;
+			System.out.println("컴퓨터가 랜덤수를 생성했습니다.");
+			System.out.println(num);
+		
+		for(; ;) {
+			System.out.println("숫자를 입력해 주세요.");
+			int num1 = scan.nextInt();
+			
+		if(num1==num) {
+			System.out.println("정답입니다.");
+			break;
+		} else if(num1<num) {
+			System.out.println("더 큰 수를 입력해 주세요.");
+		} else if(num1>num) {
+			System.out.println("더 작은 수를 입력해 주세요.");
+		}
+		
+		
+		}
+		
+		
+		
+		
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

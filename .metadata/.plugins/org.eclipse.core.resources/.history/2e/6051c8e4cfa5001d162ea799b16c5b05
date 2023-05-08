@@ -1,0 +1,39 @@
+package day05;
+
+import java.util.Scanner;
+
+public class ArrayEx03 {
+
+	public static void main(String[] args) {
+		/* 5자리 숫자를 입력받아서 입력받은 숫자를 거꾸로 출력
+		 * 각 자리수 합계 출력
+		 * ex) 11456 => 65411 => 6 + 5 + 4 + 1 + 1
+		 * ex) 19874 => 47891 => 4 + 7 + 8 + 9 + 1
+		 * 
+		 */
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int num =0;
+		int arr[] = new int[5];
+		System.out.println("5자리 숫자를 입력해 주세요. 예)12345");
+		for(int i=0; i<arr.length; i++) {
+			
+			arr[i] = scan.nextInt();
+			num = arr[i] % 10;
+			System.out.println(arr[i]);
+			System.out.println(num);
+			System.out.println(arr[i]/10);
+		}
+		
+		
+		
+		
+					
+				
+			
+		
+
+	}
+
+}

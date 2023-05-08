@@ -1,0 +1,101 @@
+package 원격수업;
+
+import java.util.Random;
+import java.util.TreeSet;
+
+public class 과제5 {
+
+	public static void main(String[] args) {
+		// 로또 프로그램 Set으로 변환하여 등수 확인하기.
+		
+		// 로또번호 랜덤 생성
+		TreeSet<Integer> lotto = new TreeSet<>();
+		
+		while(lotto.size()<6) {
+			int a = new Random().nextInt(10)+1;
+			lotto.add(a);		
+		}
+		
+		// 사용자번호 랜덤 생성
+		TreeSet<Integer> user = new TreeSet<Integer>();
+		
+		while(user.size()<6) {
+			int b = new Random().nextInt(10)+1;
+			user.add(b);
+		}
+		
+		
+		// 로또번호 보너스 생성
+		boolean flag = true;
+		int bonus = 0;
+			while (flag) {
+				bonus = new Random().nextInt(10)+1;
+				for (int tmp : lotto) {
+					if (bonus == tmp) {
+						flag = true;
+						break;
+					}
+					flag = false;
+				}
+			}
+		
+		
+		// 당첨 및 보너스 번호 확인
+		boolean bonusCheck = false;
+		int cnt = 0;
+		for (int tmp1 : user) {
+			if (tmp1 == bonus) {
+				bonusCheck = true;
+			}
+			
+			for (int tmp2 : lotto) {
+				if (tmp1 == tmp2) {
+					cnt++;
+				}
+			}
+		}
+		
+		System.out.println(lotto+"+"+bonus);
+		System.out.println(user);
+		
+		
+//		System.out.printf("당첨 번호 : ");
+//		for (Integer tmp1 : comLotto) {
+//			System.out.printf("%d ", tmp1);
+//		}
+//		System.out.printf("+ %d", bonus);
+//		System.out.println();
+//		
+//		result(cnt, bonusCheck);
+		
+		
+		
+		
+		
+		
+		
+		
+		boolean check = user.contains(lotto.iterator().next());
+		switch(cnt) {
+		case 6: 
+			System.out.println("1등");
+			break;
+		case 5:
+			if(check) {
+				System.out.println("2등");
+			} else {
+				System.out.println("3등");
+			} break;
+		case 4:
+			System.out.println("4등");
+			break;
+		case 3:
+			System.out.println("5등");
+			break;
+			default:
+				System.out.println("꽝!");
+		}
+
+	}
+
+}

@@ -1,0 +1,102 @@
+package day08;
+
+public class 클래스02 {
+
+	public static void main(String[] args) {
+		/* 자동차 클래스 생성
+		 * 멤버변수 : color, power, speed
+		 * 메서드 : powerOn, powerOff, speedUp +10, speedDown -10
+		 * 멤버변수 : private
+		 * 멤버변수를 확인/수정 => getter/setter 필요
+		 */
+		
+		Car c = new Car();
+		System.out.println(c.getColor());
+		System.out.println(c.getSpeed());
+		System.out.println(c.isPower());
+		c.color();
+		c.setColor("yellow");
+		c.color();
+		c.speedUp();
+		c.speedUp();
+		c.speedUp();
+		c.speedUp();
+		c.speedUp();
+		c.speedDown();
+		c.powerOff();
+		System.out.println(c.isPower());
+		c.speedUp();
+
+	}
+
+}
+
+class Car {
+	// 멤버변수 선언
+	private String color = "black";
+	private boolean power;
+	private int speed;
+	
+	
+	
+	// 색상
+	public void color() {
+		System.out.println("색상은 "+color+"입니다.");
+	}
+	// 색상 가져오기
+	public String getColor() {
+		return color;
+	}
+	// 색상 변경
+	public void setColor(String color) {
+		this.color = color;
+	}
+	
+	
+	// 스피드 업
+	public void speedUp() {
+		if(power=false) {
+			System.out.println("시동을 먼저 켜주십시오.");
+		} else {
+			speed += 10;
+			System.out.println("속도가 "+speed+"입니다.");
+		}
+	}	
+	// 스피드 다운
+	public void speedDown() {
+		speed -= 10;
+		System.out.println("속도가 "+speed+"입니다.");
+	}
+	
+	
+	// 파워 온
+	public void powerOn() {
+		power = true;
+		System.out.println("시동이 켜졌습니다.");
+	}
+	// 파워 오프
+	public void powerOff() {
+		power = false;
+		System.out.println("시동이 꺼졌습니다.");
+	}
+	
+	
+	
+	// getter/setter
+	public boolean isPower() {  //boolean형은 get => is
+		return power;
+	}
+	public void setPower(boolean power) {
+		this.power = power;
+	}
+	public int getSpeed() {
+		return speed;
+	}
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
+	
+	
+	
+	
+}

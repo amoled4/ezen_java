@@ -1,0 +1,70 @@
+package day14;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Subject {
+	
+	
+	private HashMap<String, Integer> map = new HashMap<String, Integer>();
+	static Scanner scan = new Scanner(System.in);
+	
+	
+	public static void main(String[] args) {
+		/* Map을 이용 성적관리 프로그램 생성
+		 * >> menu
+		 *  1. 성적 추가  과목 : 성적 ex) 국어 97
+		 *  2. 성적조회(전체 출력) : 합계/평균 같이 출력
+		 *  3. 성적조회(과목) : 서치 후 일치하는 과목 출력
+		 *  4. 성적수정 : 서치 후 수정
+		 *  5. 성적삭제
+		 *  6. 종료
+		 *  
+		 *  CRUD
+		 *  C(create) 생성 
+		 *  R(read)   읽기
+		 *  U(update) 수정
+		 *  D(delete) 삭제
+		 */
+		
+		Subject sub = new Subject();
+		sub.menu();
+		
+		int select = scan.nextInt();
+		
+		switch(select) {
+		case 1: sub.crate(); break;
+		}
+		
+		
+	}
+	
+	public void menu() {
+		System.out.println("====================");
+		System.out.println(">> Menu");
+		System.out.println("1. 성적추가");
+		System.out.println("2. 전체 성적조회");
+		System.out.println("3. 성적조회(과목)");
+		System.out.println("4. 성적수정");
+		System.out.println("5. 성적삭제");
+		System.out.println("6. 종료");
+		System.out.println("====================");
+	}
+	
+	public void crate() {
+		
+		int exit = 1;  // exit = 0이면 종료
+		
+		while(exit!=0) {
+			//입력
+			System.out.println("과목과 점수를 입력해주세요.");
+			String subject = scan.next();
+			int score = scan.nextInt();
+			
+			map.put(subject, score);
+			System.out.println("계속:1, 종료:0");
+			exit = scan.nextInt();
+		}
+		
+	}
+}

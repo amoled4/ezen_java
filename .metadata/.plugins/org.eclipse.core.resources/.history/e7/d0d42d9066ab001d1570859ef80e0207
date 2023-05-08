@@ -1,0 +1,55 @@
+package day10;
+
+public class EzenComputerMain {
+
+	public static void main(String[] args) {
+		EzenComputer ec = new EzenComputer();
+		ec.setStudentName("홍길동");
+		ec.setAge(20);
+		ec.setBirth("2004-01-01");
+		ec.setCallNum("010-1111-1111");
+		ec.setCenterName("incheon");
+		ec.studentPrint();
+		ec.centerPrint();
+		ec.insert("java", "6개월");
+		ec.insert("html", "1개월");
+		ec.insert("DB", "1개월");
+		ec.classPrint();
+		
+		EzenComputer ec1 = new EzenComputer("홍길순", "2003-01-01", 22, "010-1234-5677", "seoul");
+		ec1.studentPrint();
+		ec1.centerPrint();
+		ec1.insert("java", "5개월");
+		ec1.insert("java단과", "1개월");
+		ec1.classPrint();
+		System.out.println("-----------------------------------------");
+		/* 배열로 5명의 학생을 등록 후
+		 *  -학생 이름으로 검색
+		 *  -지정명으로 검색
+		 */
+		EzenComputer[] std = new EzenComputer[7];
+		std[0] = new EzenComputer("홍길동", "010-1357-2468", "인천");
+		std[1] = new EzenComputer("홍길순", "010-2222-2468", "서울");
+		std[2] = new EzenComputer("강감찬", "010-3333-2468", "인천");
+		std[3] = new EzenComputer("유관순", "010-4444-2468", "부천");
+		std[4] = new EzenComputer("안창호", "010-5555-2468", "서울");
+		std[5] = ec;
+		std[6] = ec1;
+		
+		String searchName = "홍길동";  // 홍길동이 상담받은 지점정보 출력/ 개인정보 출력
+		for(int i=0; i<std.length; i++) {
+			if(std[i].getStudentName().equals(searchName)) {
+				std[i].studentPrint();
+			}
+			
+		}
+		String searchCenter = "인천"; // 지점정보, 개인정보 출력
+		for(int i=0; i<std.length; i++) {
+			if(std[i].getCenterName().equals(searchCenter)) {
+				std[i].centerPrint();
+			}
+		}
+
+	}
+
+}

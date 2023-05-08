@@ -1,0 +1,38 @@
+package day13;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class List01 {
+
+	public static void main(String[] args) {
+		/* 하루 일과를 저장하는 list 생성
+		 * 
+		 */
+		
+		ArrayList<String> todayList = new ArrayList<String>();
+		todayList.add("기상");
+		todayList.add("씻기");
+		todayList.add("아침밥 먹기");
+		todayList.add("옷 입기");
+		todayList.add("학원 가기");
+		todayList.add("공부하기");
+		todayList.add("점심 먹기");
+		todayList.add("귀가하기");
+		todayList.add("운동하기");
+		todayList.add("저녁 먹기");
+		todayList.add("샤워하기");
+		todayList.add("과제하기");
+		todayList.add("취침");
+		
+		for(String tmp : todayList) {
+			System.out.println(tmp);
+		}
+		
+		Collections.sort(todayList);
+		System.out.println(todayList);
+		
+
+	}
+
+}

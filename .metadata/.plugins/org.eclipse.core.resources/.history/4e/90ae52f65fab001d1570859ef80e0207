@@ -1,0 +1,21 @@
+package day10;
+
+public class EzenComputerMain {
+
+	public static void main(String[] args) {
+		EzenComputer ec = new EzenComputer();
+		ec.setStudentName("홍길동");
+		ec.setAge(20);
+		ec.setBirth("2004-01-01");
+		ec.setCallNum("010-1111-1111");
+		ec.setCenterName("incheon");
+		ec.studentPrint();
+		ec.centerPrint();
+		ec.insert("java", "6개월");
+		ec.insert("html", "1개월");
+		ec.insert("DB", "1개월");
+		ec.classPrint();
+
+	}
+
+}

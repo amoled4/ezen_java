@@ -1,0 +1,16 @@
+package day11;
+
+public class CustomerMain {
+
+	public static void main(String[] args) {
+		Customer c = new Customer();
+		
+		c.customerInfo();
+		
+		Customer c1 = new Customer(001, "홍길동", null, 0, 0);
+		c.customerInfo();
+		
+
+	}
+
+}

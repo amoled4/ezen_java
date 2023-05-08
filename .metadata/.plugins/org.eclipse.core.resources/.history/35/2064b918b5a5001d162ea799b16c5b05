@@ -1,0 +1,33 @@
+package day05;
+
+import java.util.Scanner;
+
+public class 배열연습 {
+
+	public static void main(String[] args) {
+		/* 5명의 점수를 입력 받아 배열에 저장하고
+		 * 점수의 합계, 평균, 최대, 최소값을 출력
+		 */
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int num = 5;
+		int sum = 0;
+		double avg = 0.0;
+		int max;
+		int min;
+		int arr[] = new int[num];
+		
+		System.out.println("점수를 입력해 주세요. (5명)");
+		for(int i=0; i<arr.length; i++) {
+		arr[i] = scan.nextInt();
+		sum = sum + arr[i];
+		avg = sum / arr.length;
+		
+		System.out.println("합계 : "+sum);
+		System.out.println("평균 : "+avg);
+		
+
+	}
+
+}

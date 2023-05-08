@@ -1,0 +1,58 @@
+package day08;
+
+import day07.Lotto정답;
+
+public class 과제 {
+
+	public static void main(String[] args) {
+		/* 야구게임
+		 * 컴퓨터가 3자리의 숫자를 배열로 생성 (1~9까지만) => 중복 발생 가능성(제거)
+		 * 유저가 3자리의 숫자를 맞추는 게임
+		 * 숫자와 자리가 일치하면 strike
+		 * 숫자만 일치하면 ball, 아무것도 안 맞으면 out
+		 * count 세기
+		 * 맞힐 때까지 반복
+		 * 
+		 * ex)
+		 * 컴 - 3 5 7 
+		 * 나 - 3 4 6
+		 * 1s
+		 * 
+		 * 3 5 7
+		 * 3 7 8
+		 * 1s 1b
+		 * 
+		 * 3 5 7
+		 * 6 8 1
+		 * out
+		 * --야구게임 시작
+		 * 컴퓨터가 숫자를 정했습니다.
+		 * 숫자를 입력해주세요. (1~9, 3자리) >
+		 * 3 5 6 
+		 * 2s
+		 * 3s 다 맞으면 종료(게임횟수출력)
+		 */
+		
+		int comNum[] = new int[3];  // 컴퓨터 배열
+		int myNum[] = new int[3];   // 내 배열
+		int count = 0;   // 게임 횟수 출력용
+		
+		Lotto정답 lotto = new Lotto정답();
+		Lotto정답.randomArray(comNum);
+
+	}
+	
+	 public static void comNumArray(int arr[]) {
+		 for(int i=0; i<arr.length; i++) {
+				arr[i] = (int)(Math.random()*9)+1; 
+				for(int j=0; j<i; j++) {
+					if(arr[i] == arr[j]) {
+						i--;
+						break;  // for(j의 구문을 빠져나감)
+					}
+				}
+			}
+	 }
+	
+
+}

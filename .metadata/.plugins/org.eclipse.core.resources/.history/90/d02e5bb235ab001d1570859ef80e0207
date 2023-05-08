@@ -1,0 +1,69 @@
+package day10;
+
+public class 클래스04 {
+
+	public static void main(String[] args) {
+		Car c = new Car("black",2,false,false,0);
+		c.print();
+
+	}
+
+}
+
+
+class Car {
+	// 멤버변수 : color, door, airback, power, speed
+	private String color;
+	private int door;
+	private boolean airback;
+	private boolean power;
+	private int speed;
+	
+	// 생성자 : 빈생성자, color, (color, door), (color, door, airback), 전체값 생성자
+	public Car() {
+		
+	}
+	
+	public Car(String color) {
+		this.color = color;
+	}
+	
+	public Car(String color, int door) {
+		this.color = color;
+		this.door = door;
+	}
+	
+	public Car(String color, int door, boolean airback) {
+		this.color = color;
+		this.door = door;
+		this.airback = airback;
+	}
+	
+	public Car(String color, int door, boolean airback, boolean power, int speed) {
+		this.color = color;
+		this.door = door;
+		this.airback = airback;
+		this.power = power;
+		this.speed = speed;
+	}
+	
+	// method : print
+	
+	public void print() {
+		System.out.println("색상은 "+color+"입니다.");
+		System.out.println("문은 "+door+"개입니다.");
+		if(airback == true) {
+			System.out.println("에어백이 작동되었습니다.");
+		} else {
+			System.out.println("에어백이 대기 중입니다.");
+		}
+		if(power == true) {
+			System.out.println("시동이 켜졌습니다.");
+		} else {
+			System.out.println("시동이 꺼졌습니다.");
+		}		
+		System.out.println("속도가 "+speed+"입니다.");
+	}
+	
+	// getter/setter
+}

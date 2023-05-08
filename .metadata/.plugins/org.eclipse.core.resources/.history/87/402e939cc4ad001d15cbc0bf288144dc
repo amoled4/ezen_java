@@ -1,0 +1,25 @@
+package day13;
+
+import java.util.HashSet;
+
+public class Set01 {
+
+	public static void main(String[] args) {
+		/* Set : 순서보장X 중복X
+		 * Hashset
+		 * index가 없음
+		 */
+		HashSet<String> set = new HashSet<String>();
+		set.add("apple");
+		set.add("banana");
+		set.add("apple");
+		set.add("peach");
+		set.add("홍길동");
+		set.add("이순신");
+		
+		
+		System.out.println(set);
+
+	}
+
+}

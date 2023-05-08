@@ -1,0 +1,59 @@
+package day13;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Collection01 {
+
+	public static void main(String[] args) {
+		/* 컬렉션 프레임워크 : 표준화된 방식의 자료구조
+		 * List, Set, Map
+		 * 데이터를 묶어서 관리할 때 사용
+		 * 주로 배열 대신 사용
+		 * 
+		 * List : 배열과 동일
+		 *  - 값을 하나씩 저장
+		 *  - 순서를 보장
+		 *  - 중복을 허용
+		 *  - 배열 대신 가장 많이 사용
+		 *  
+		 * Set
+		 *  - 값을 하나씩 저장
+		 *  - 순서를 보장 X (index)번지가 없음
+		 *  - 중복 X
+		 *  
+		 * Map
+		 *  - 값을 두 개 저장 key/value 쌍으로 저장
+		 *  - key는 중복 불가, value는 중복 가능
+		 *  - key가 중복되면 덮어쓰기 됨
+		 *  - 아이디 / 패스워드처럼 같이 묶어서 하나의 자료로 저장해야 할 때 사용
+		 *  
+		 * int arr[]; : 기본 자료형 사용 가능
+		 * collection에서는 어떤 클래스로 데이터를 관리할지 지정해야 함
+		 * 
+		 * int -> Integer, String, 나머지 자료형들은 첫글자만 대문자로 변환 Byte, Boolean...
+		 * 클래스를 지정하지 않으면 Object가 자동으로 들어간다
+		 *  
+		 */
+		
+//		List list1 = new List();             // error
+		List list1 = new ArrayList();       // Object클래스가 자동 지정된 케이스
+		ArrayList list2 = new ArrayList();  // Object클래스가 자동 지정된 케이스
+		
+		// 숫자만 가능한 ArrayList 생성
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		// 문자열만 가능한 ArrayList 생성
+		ArrayList<String> list3 = new ArrayList<String>();
+		
+		// add() : 요소를 추가
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		System.out.println(list);
+		
+		// size() : list의 총 개수
+		System.out.println(list.size());
+
+	}
+
+}

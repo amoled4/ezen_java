@@ -1,0 +1,37 @@
+package 원격수업;
+
+import java.util.ArrayList;
+
+public class 과제4 {
+
+	public static void main(String[] args) {
+//		두 배열을 하나로 합치는 ArrayList를 구성
+//		arr1 = a,e,f;
+//		arr2 = d,b,c;
+//		list = a,e,f,d,b,c; =>출력
+//		list를 정렬
+//		list = a,b,c,d,e,f; => 출력
+//		Iterator 사용
+//
+//		ex)
+//		String arr1[] = new String[] {"a","e","f"};
+//		String arr2[] = new String[] {"d","b","c"};
+
+		String arr1[] = new String[] {"a","e","f"};
+		String arr2[] = new String[] {"d","b","c"};
+		
+		ArrayList<String> list = new ArrayList<String>();
+		
+		for(String tmp : arr1) {
+			list.add(tmp);
+		}
+//		for(String tmp : arr2) {
+//			list.add(tmp);
+//		}
+		
+		System.out.println(list);
+		
+		
+	}
+
+}

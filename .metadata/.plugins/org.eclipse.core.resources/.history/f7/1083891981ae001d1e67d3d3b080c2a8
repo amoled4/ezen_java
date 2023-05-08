@@ -1,0 +1,23 @@
+package day14;
+
+import java.util.HashSet;
+
+public class SetEx02 {
+
+	public static void main(String[] args) {
+		// 점수들 중 가장 큰 점수와 가장 작은 점수 출력
+		int[] score = { 80, 98, 75, 48, 95, 62, 57, 80};
+		
+		HashSet<Integer> set = new HashSet<Integer>();
+		
+		for(int i=0; i<score.length; i++) {
+			set.add(i);
+		}
+		
+		System.out.println(set);
+		
+		
+
+	}
+
+}

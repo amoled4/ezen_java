@@ -1,0 +1,50 @@
+package day06;
+
+import java.util.Scanner;
+
+public class Method03 {
+
+	public static void main(String[] args) {
+		/* 메서드를 활용하여 계산기를 작성
+		 * 
+		 * 메서드는 + - * / % 를 작성하여 출력
+		 * 두 수를 입력받아서 연산 연산자를 입력받아 메서드를 활용하여 연산
+		 * 
+		 */
+	
+	
+		
+	Scanner scan = new Scanner(System.in);
+	System.out.println("두 수를 입력해 주세요");
+	int num1,num2 = scan.nextInt();
+	
+	
+//	switch() {
+//	case 
+//	}
+//	
+	
+	
+	
+	
+
+	}
+	
+	public static int sum(int num1, int num2) {
+		return num1 + num2;
+	}
+	
+	public static int min(int num1, int num2) {
+		return num1 - num2;
+	}
+	
+	public static int mul(int num1, int num2) {
+		return num1 * num2;
+		
+	public static 
+	}
+	
+	
+	
+
+}

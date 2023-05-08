@@ -1,0 +1,29 @@
+package day10;
+
+public class EzenComputerMain {
+
+	public static void main(String[] args) {
+		EzenComputer ec = new EzenComputer();
+		ec.setStudentName("홍길동");
+		ec.setAge(20);
+		ec.setBirth("2004-01-01");
+		ec.setCallNum("010-1111-1111");
+		ec.setCenterName("incheon");
+		ec.studentPrint();
+		ec.centerPrint();
+		ec.insert("java", "6개월");
+		ec.insert("html", "1개월");
+		ec.insert("DB", "1개월");
+		ec.classPrint();
+		
+		EzenComputer ec1 = new EzenComputer("홍길순", "2003-01-01", 22, "010-1234-5677", "seoul");
+		ec1.studentPrint();
+		ec1.centerPrint();
+		ec1.insert("java", "5개월");
+		ec1.insert("java단과", "1개월");
+		ec1.classPrint();
+				
+
+	}
+
+}

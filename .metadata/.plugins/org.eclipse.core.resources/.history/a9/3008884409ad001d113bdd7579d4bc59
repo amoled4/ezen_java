@@ -1,0 +1,83 @@
+package day12;
+
+public class 과제 {
+
+	public static void main(String[] args) {
+		/* TV의 채널은 0~10까지 있음 channel은 순환구조
+		 * vol 0~20까지 있음 0이 되면 음소거라고 출력
+		 * vol 0이하로 내려가지 않음 20이상 올라가지 않음
+		 * 
+		 */
+		
+		Tv t = new Tv();
+		t.powerOff();
+		t.channelUp();
+
+	}
+
+}
+
+interface remocon {
+	void powerOn();
+	void powerOff();
+	void channelUp();
+	void channelDown();
+	void volUp();
+	void volDown();
+}
+
+class Tv implements remocon {
+	boolean power;
+	int ch;
+	int vol;
+	
+	
+	@Override
+	public void powerOn() {
+		System.out.println("Tv가 켜졌습니다.");
+		power = true;
+		
+	}
+	@Override
+	public void powerOff() {
+		System.out.println("Tv가 꺼졌습니다.");
+		power = false;
+		
+	}
+	@Override
+	public void channelUp() {
+		if(power==true) {
+			ch++;
+			if(ch>10) {
+				ch = 0;
+			} else {
+				System.out.println("먼저 전원을 켜주십시오.");
+			}
+			
+		}
+		System.out.println(ch);
+			
+		
+	}
+	@Override
+	public void channelDown() {
+		ch--;
+		if(ch<0) {
+			ch = 10;
+		}
+		System.out.println(ch);
+		
+	}
+	@Override
+	public void volUp() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void volDown() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}

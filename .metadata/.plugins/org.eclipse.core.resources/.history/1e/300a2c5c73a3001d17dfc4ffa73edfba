@@ -1,0 +1,43 @@
+package day04;
+
+import java.util.Scanner;
+
+public class 문제정답 {
+
+	public static void main(String[] args) {
+		  // 스캐너 열기
+		  Scanner scan = new Scanner(System.in);
+		  // 랜덤수 결정하기
+		  int random = (int)(Math.random()*50) +1;
+		  int num=0, count=0;
+		  System.out.println("컴퓨터가 랜덤수를 결정했습니다. (1~50까지)");
+		  
+		  // 반복문 열기
+		  while(num!=random) {
+		  		System.out.println("입력: ");
+		  		num = scan.nextInt();
+		  		count++;   // 사용자가 입력했을 때 1 증가
+		  		if(count==5) {
+		  			System.out.println("기회를 모두 사용했습니다.");
+		  			break;
+		  		}
+		  //비교
+		 if(num <1 || num > 50) {
+		  		System.out.println("입력 범위를 벗어났습니다. (1~50)");
+		  } else {
+		  		if(num > random) {
+		  			System.out.println("down~!!");
+		  		} else if(num < random) {
+		  			System.out.println("up~!!");
+		  		} else {
+		  			System.out.println("정답입니다~!!");
+		  		}
+		  	}
+		  	System.out.println("게임횟수 : "+count);
+		  }
+		 
+		 
+
+	}
+
+}

@@ -1,0 +1,35 @@
+package day11;
+
+public class CustomerMain {
+
+	public static void main(String[] args) {
+		
+		Customer c = new Customer(001, "홍길동");
+		c.calcPrice(1000);
+		c.calcPrice(100);
+		c.customerInfo();
+		
+		Customer g1 = new GoldCustomer(002, "홍길순");
+		g1.customerInfo();
+		
+		Customer v1 = new VIPCustomer(003, "김크림",1);
+		v1.customerInfo();
+		
+		System.out.println("=== 할인율과 포인트 계산===");
+		int price = 100000;
+		int cost = c.calcPrice(price);
+		
+		System.out.println(c.getCustomerName()+" 님이 지불하실 금액은 "+cost+"원입니다.");
+		System.out.println(c.getCustomerName()+" 님의 현재 포인트는 "+c.bonusPoint+"점입니다.");
+		
+		int cost1 = g1.calcPrice(price);
+		System.out.println(g1.getCustomerName()+" 님이 지불하실 금액은 "+cost+"원입니다.");
+		System.out.println(g1.getCustomerName()+" 님의 현재 포인트는 "+g1.bonusPoint+"점입니다.");
+		
+		int cost2 = v1.calcPrice(price);
+		System.out.println(v1.getCustomerName()+" 님이 지불하실 금액은 "+cost+"원입니다.");
+		System.out.println(v1.getCustomerName()+" 님의 현재 포인트는 "+v1.bonusPoint+"점입니다.");
+
+	}
+
+}

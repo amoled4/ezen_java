@@ -1,0 +1,15 @@
+package day09;
+
+public class CardPackMain {
+
+	public static void main(String[] args) {
+		/* 카드 생성
+		 * 
+		 */
+		
+		Card c = new Card();   // 기본생성자 : 하트1
+		c.print();
+
+	}
+
+}

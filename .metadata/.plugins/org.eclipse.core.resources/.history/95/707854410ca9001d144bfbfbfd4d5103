@@ -1,0 +1,39 @@
+package day09;
+
+public class CardPackMain {
+
+	public static void main(String[] args) {
+		/* 카드 생성
+		 * 
+		 */
+		
+		Card c = new Card();   // 기본생성자 : 하트1
+		c.print();
+		
+		CardPack cp = new CardPack();
+		
+		Card tmp = cp.pick();  // 가장 위에 있는 카드 한장을 pick Card 객체에 저장
+		for(int i=0; i<4; i++) {
+			System.out.println();
+			for(int j=0; j<1; j++) {
+				tmp = cp.pick();
+				tmp.print();
+			}
+		}
+		
+		
+		
+		tmp.print();
+		tmp = cp.pick();  // 가장 위에 있는 카드 한장을 pick Card 객체에 저장
+		tmp.print();
+		// 모양대로 4열횡대
+		// 한 모양이 끝나면 줄바꿈
+		tmp = cp.pick(); 
+		tmp.print();
+		System.out.println();
+		tmp = cp.pick(); 
+		tmp.print();
+
+	}
+
+}

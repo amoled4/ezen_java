@@ -1,0 +1,40 @@
+package day13;
+
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class Set01 {
+
+	public static void main(String[] args) {
+		/* Set : 순서보장X 중복X
+		 * Hashset
+		 * index가 없음
+		 */
+		HashSet<String> set = new HashSet<String>();
+		set.add("apple");
+		set.add("banana");
+		set.add("apple");
+		set.add("peach");
+		set.add("홍길동");
+		set.add("이순신");
+		
+		
+		System.out.println(set);
+		
+		// get사용 불가능 향상된 for문만 가능
+		for(String tmp : set) {
+			System.out.print(tmp+" ");
+		}
+		System.out.println();
+		
+		Iterator<String> it = set.iterator();
+		while(it.hasNext()) {
+			String tmp = it.next();
+			System.out.print(tmp+" ");
+		}
+		System.out.println();
+		
+
+	}
+
+}

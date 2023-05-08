@@ -1,0 +1,8 @@
+apple : 사과
+banana : 바나나
+cat : 고양이
+detele : 삭제
+dog : 강아지
+eagle : 독수리
+tiger : 호랑이
+wolf : 늑대

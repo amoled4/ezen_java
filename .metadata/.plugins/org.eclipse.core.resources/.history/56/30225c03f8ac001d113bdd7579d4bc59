@@ -1,0 +1,15 @@
+package day12;
+
+public class Exception03 {
+
+	public static void main(String[] args) {
+		/* 자주 발생하는 예외 코드들
+		 * 
+		 */
+		
+		double a = 1/0;
+		System.out.println(a);
+
+	}
+
+}

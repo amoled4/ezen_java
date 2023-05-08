@@ -1,0 +1,71 @@
+package day06;
+
+import java.util.Scanner;
+
+public class Method03정답 {
+
+	public static void main(String[] args) {
+		/* 메서드를 활용하여 계산기를 작성
+		 * 
+		 * 메서드는 + - * / % 를 작성하여 출력
+		 * 두 수를 입력받아서 연산 연산자를 입력받아 메서드를 활용하여 연산
+		 * 
+		 */
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("==계산기를 만들어 보자==");
+		System.out.println("연산자를 입력해주세요 > ");
+		String op = scan.next();   // char op = scan.next().charAt(0);
+		
+		System.out.println("첫 번째 숫자 > ");
+		int num1 = scan.nextInt();
+		System.out.println("두 번째 숫자 > ");
+		int num2 = scan.nextInt();
+		
+		switch(op) {
+		case "+":
+			addition(op, num1, num2);
+			break;
+		case "-":
+			int sub = substration(num1, num2);
+			System.out.println(num1+op+num2+"="+sub);
+			break;
+		case "*":
+			multipulication(num1, op, num2);
+			break;
+		case "/":
+			System.out.println(num1+op+num2+"="+division(num1, num2));
+			break;
+		case "%":
+			rem(num1, num2);
+			break;
+		default:
+			System.out.println("잘못된 연산자 입니다.");
+		}
+		System.out.println("계산기 종료");
+
+	}
+	
+	// 메서드 정의
+	public static void addition(String op, int num1, int num2) {
+		System.out.println(num1+ op + num2+ "="+(num1+num2));
+	}
+	
+	public static int substration(int num1, int num2) {
+		return num1 - num2;
+	}
+	
+	public static void multipulication(int num1, String op, int num2) {
+		System.out.println(num1+ op + num2+ "=" +(num1 * num2));
+	}
+	
+	public static double division(int num1, int num2) {
+		return (double)num1 / num2;
+	}
+	
+	public static void rem(int num1, int num2) {
+		System.out.println(num1+ "%" + num2+ "=" +(num1 % num2));
+
+	}
+
+}

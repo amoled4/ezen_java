@@ -1,0 +1,17 @@
+package day11;
+
+public class CustomerMain {
+
+	public static void main(String[] args) {
+		Customer c = new Customer();
+		c.setCustomerId(001);
+		c.setCustomerName("홍길동");
+		c.customerInfo();
+		
+		Customer c1 = new Customer();
+		c.customerInfo();
+		
+
+	}
+
+}

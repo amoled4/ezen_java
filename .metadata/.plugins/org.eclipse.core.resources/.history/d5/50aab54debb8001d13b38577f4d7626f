@@ -1,0 +1,60 @@
+package 원격수업;
+
+import java.util.Random;
+import java.util.TreeSet;
+
+public class 과제5 {
+
+	public static void main(String[] args) {
+		// 로또 프로그램 Set으로 변환하여 등수 확인하기.
+		
+		// 로또번호 랜덤 생성
+		TreeSet<Integer> lotto = new TreeSet<>();
+		
+		while(lotto.size()<7) {
+			int a = new Random().nextInt(10)+1;
+			lotto.add(a);		
+		}
+		
+		// 사용자번호 랜던 생성
+		TreeSet<Integer> user = new TreeSet<Integer>();
+		
+		while(user.size()<6) {
+			int b = new Random().nextInt(10)+1;
+			user.add(b);
+		}
+		
+		
+		System.out.println(lotto);
+		System.out.println(user);
+		
+		int cnt = 0;
+		for(int tmp : user) {
+			if(lotto.contains(tmp)) {
+				cnt++;
+			}
+		}
+		
+		switch(cnt) {
+		case 6: 
+			System.out.println("1등");
+			break;
+		case 5:
+			if(user.contains(lotto.size()-1)) {
+				System.out.println("2등");
+			} else {
+				System.out.println("3등");
+			}
+		case 4:
+			System.out.println("4등");
+			break;
+		case 3:
+			System.out.println("5등");
+			break;
+			default:
+				System.out.println("꽝!");
+		}
+
+	}
+
+}

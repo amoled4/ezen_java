@@ -1,0 +1,19 @@
+package day11;
+
+public class CustomerMain {
+
+	public static void main(String[] args) {
+		
+		Customer c = new Customer("홍길동");
+		c.calcPrice(1000);
+		c.customerInfo();
+		
+		Customer c1 = new Customer();
+		c1.setCustomerName("홍길순");
+		c1.calcPrice(10000);
+		c1.customerInfo();
+		
+
+	}
+
+}
