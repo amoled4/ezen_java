@@ -28,7 +28,7 @@ public class ProductDAO implements DAO {
 		// pname, price, madeby
 		query = "insert into product(pname, price, madeby) values(?,?,?)";
 		try {
-			pst = conn.prepareStatement(query);
+			pst = conn.prepareStatement(query);  // DB 연결 구문
 			// pst.set자료형(물음표순번, 값)
 			pst.setString(1, product.getPname());
 			pst.setInt(2, product.getPrice());
